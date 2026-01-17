@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himalaya Singh | Engineering Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1020;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: #1f4ed8;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 44px;
+    }
+
+    header p {
+      margin: 6px 0;
+      font-size: 16px;
+      color: #e6ecff;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
+
+    h2 {
+      margin: 30px 0 12px 0;
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+    }
+
+    .card {
+      background: #161c33;
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+    }
+
+    .project-card {
+      background: #161c33;
+      padding: 22px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .project-desc {
+      color: #d0d6ff;
+      line-height: 1.7;
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #d0d6ff;
+      line-height: 1.6;
+    }
+
+    .skills-list {
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #0b1020;
+      color: #ffffff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 14px;
+    }
+
+    .btn.primary {
+      background: #ffffff;
+      color: #0b1020;
+      border: 1px solid #ffffff;
+      font-weight: 700;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    figure {
+      margin: 0;
+      background: #0f1430;
+      border: 1px solid #2a356b;
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: #d0d6ff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 12px 40px 12px;
+      color: #aab2d5;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .skills-list {
+        columns: 1;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Himalaya Singh</h1>
+    <p>Mechanical Design Engineer (M.Tech) | Multiphysics Simulation | Finite Element Analysis</p>
+    <p>FEM • Fracture Mechanics • Computational Mechanics • Python Scripting</p>
+
+    <div class="btns">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#certifications">Certifications</a>
+      <a class="btn" href="mailto:yourmail@example.com">Email</a>
+      <a class="btn" href="https://github.com/ME22M817" target="_blank">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section>
+      <h2>Professional Summary</h2>
+
+      <div class="card">
+        <p class="project-desc">
+          Mechanical Design Engineer (M.Tech) with over 2 years of experience in multiphysics simulation and finite element
+          analysis. Skilled in mathematical modelling, stress analysis, and thermomechanical coupling. Passionate about FEM
+          based research in composites, process optimization, and advanced numerical simulation methods.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+
+      <div class="card">
+        <ul class="skills-list">
+          <li>Finite Element Method (FEM)</li>
+          <li>Computational Mechanics</li>
+          <li>Backend Computational Simulation Engineer</li>
+          <li>Fracture Mechanics</li>
+          <li>Multiphysics Simulation</li>
+          <li>Python Scripting</li>
+          <li>Designing</li>
+          <li>Stress Analysis</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>Role of Microstructure on Stress-Diffusion Interactions in Li-Ion Battery Electrode</h3>
+
+        <p class="project-desc">
+          Simulated stress diffusion coupling during lithiation and delithiation using multiphysics FEM, and analysed the effects
+          of grain size, boundary thickness, and orientation on stress evolution and failure mechanisms.
+        </p>
+
+        <ul>
+          <li>Studied microstructural influence on stress localisation using grain size, grain boundary thickness, and orientation parameters.</li>
+          <li>Analysed von Mises stress response under varying partial molar volume (ω) and diffusion-driven gradients.</li>
+          <li>Investigated high-frequency time-dependent boundary conditions and their impact on concentration gradients and stress build-up.</li>
+        </ul>
+
+        <p class="project-desc">
+          <strong>Conclusion:</strong> Smaller grain sizes reduce von Mises stress and stress localization due to lower gradients and better strain accommodation,
+          while larger grains show higher stresses. Von Mises stress generally increases with partial molar volume (ω),
+          though localized reductions may occur, and high frequency time dependent boundary conditions induce high stresses due to steep concentration gradients.
+        </p>
+
+        <div class="gallery">
+          <figure>
+            <img src="Project1/Flowchart.png" alt="Methodology workflow">
+            <figcaption>Methodology workflow: Gmsh mesh → FEniCS multiphysics → ParaView results.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project1/Mico.png" alt="Microstructure and mesh selection">
+            <figcaption>Polycrystalline microstructure with grains and grain boundaries; triangular mesh selection.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project1/Simu.png" alt="Li-ion diffusion concentration fields">
+            <figcaption>Li-ion diffusion concentration fields for grain radii R = 20 μm, 30 μm, 40 μm.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project1/Grpahs.png" alt="Inside grains time versus von Mises stress">
+            <figcaption>Inside grains: time vs von Mises stress at multiple probe points for different ω values.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project1/Grpahs1.png" alt="Comparison of von Mises stress for different radii">
+            <figcaption>Comparison of von Mises stress vs time at different time intervals for R = 20 μm, 30 μm, 40 μm.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Compression Testing of Compacted Solids Using Finite Element Analysis</h3>
+
+        <p class="project-desc">
+          Developed a coupled Drucker Prager plasticity and phase field fracture FEM model for MCC tablets and validated crack initiation and force hardness evolution against experimental axial hardness data.
+        </p>
+
+        <ul>
+          <li>Implemented Drucker Prager plasticity to capture densification and irreversible deformation during compaction.</li>
+          <li>Coupled phase-field fracture to detect crack initiation and damage evolution under compression loading.</li>
+          <li>Compared predicted force response and hardness evolution with experimental axial hardness measurements.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure>
+            <img src="Project2/50K_mesh.png" alt="Particle packing mesh">
+            <figcaption>Particle packing and mesh used for 3D FEM tablet compaction simulation.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project2/Geo.png" alt="Geometry view 1">
+            <figcaption>Geometry and boundary tagging for compression setup.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project2/Geo1.png" alt="Geometry view 2">
+            <figcaption>Packed particle domain and boundary regions used for applying loading conditions.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project2/Geo2.png" alt="Geometry view 3">
+            <figcaption>Mesh quality and region identification for stable nonlinear solve.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project2/Geo3.png" alt="Geometry view 4">
+            <figcaption>Compression directions, contact regions, and constrained surfaces.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project2/comp.jpg" alt="Compression results">
+            <figcaption>Compression response with hardness evolution and crack initiation validation.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Mathematical Modelling of Fluid Bed Granulation Process to Enhance Machine Performance</h3>
+
+        <p class="project-desc">
+          Developed a mathematical two phase spraying drying model using temperature dependent GAB isotherms and heat transfer formulations, and simulated bed temperature and drying evolution consistent with experimental data.
+        </p>
+
+        <ul>
+          <li>Built a two-phase model separating binder spraying and post-spray drying behaviour.</li>
+          <li>Implemented temperature dependent GAB isotherms for equilibrium moisture prediction.</li>
+          <li>Modelled heat transfer and evaporation to reproduce realistic bed temperature and LOD trends.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure>
+            <img src="Project3/Grpah.png" alt="Fluid bed granulation model results">
+            <figcaption>Representative simulation output for drying evolution and performance trend.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Design and Analysis of Clutch of Hayabusa Model 1340</h3>
+
+        <p class="project-desc">
+          Designed clutch components in Creo and performed FEA in ANSYS to evaluate stress, thermal effects, and deformation, improving durability and power transmission efficiency.
+        </p>
+
+        <ul>
+          <li>Designed clutch components and assembly in Creo with manufacturing-ready geometry.</li>
+          <li>Performed structural and thermal FEA in ANSYS to evaluate stress distribution and deformation.</li>
+          <li>Improved durability and power transmission efficiency through design validation and optimisation.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure>
+            <img src="Project4/1.png" alt="Clutch design and analysis image 1">
+            <figcaption>Clutch component design and assembly overview.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/2.png" alt="Clutch design and analysis image 2">
+            <figcaption>Material and boundary condition definition for FEA model.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/3.png" alt="Clutch design and analysis image 3">
+            <figcaption>Stress distribution results from ANSYS structural analysis.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/4.png" alt="Clutch design and analysis image 4">
+            <figcaption>Deformation contour and component deflection results.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/5.png" alt="Clutch design and analysis image 5">
+            <figcaption>Thermal analysis setup and temperature distribution.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/6.png" alt="Clutch design and analysis image 6">
+            <figcaption>Combined thermo-mechanical assessment for durability evaluation.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/7.png" alt="Clutch design and analysis image 7">
+            <figcaption>Design iteration outcomes to improve durability and transmission efficiency.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project4/8.png" alt="Clutch design and analysis image 8">
+            <figcaption>Final validated design with key performance improvements.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+
+      <div class="project-card">
+        <ul>
+          <li>Finite element analysis convergence and mesh independence (May, 2023)</li>
+          <li>FEM linear, nonlinear analysis and post-processing (May, 2023)</li>
+          <li>Automation in robotics control (April, 2021)</li>
+          <li>QCAD (Aug, 2020), Solid Edge (Feb, 2020), Python Programming (May, 2023)</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Himalaya Singh
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
