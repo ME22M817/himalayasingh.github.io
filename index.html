@@ -31,25 +31,6 @@
       color: #e6ecff;
     }
 
-    .hero {
-      max-width: 980px;
-      margin: 18px auto 0 auto;
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 0 18px;
-    }
-
-    .hero img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 16px;
-      border: 2px solid rgba(255, 255, 255, 0.35);
-      background: rgba(0,0,0,0.2);
-    }
-
     .btns {
       display: flex;
       justify-content: center;
@@ -209,15 +190,6 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
-
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero img {
-        margin: 0 auto;
-      }
     }
   </style>
 </head>
@@ -228,15 +200,6 @@
     <h1>Himalaya Singh</h1>
     <p>Mechanical Design Engineer (M.Tech) | Multiphysics Simulation | Finite Element Analysis</p>
     <p>FEM • Fracture Mechanics • Computational Mechanics • Python Scripting</p>
-
-    <div class="hero">
-      <img src="Journal/Himalaya%20Singh.jpeg" alt="Himalaya Singh" />
-      <div>
-        <div class="links-row">
-          <a class="btn" href="Journal/JOURNAL%20PAPER.pdf" target="_blank" rel="noreferrer">View Journal Paper (PDF)</a>
-        </div>
-      </div>
-    </div>
 
     <div class="btns">
       <a class="btn primary" href="#projects">View Projects</a>
@@ -508,12 +471,20 @@
       <h2>Journal</h2>
 
       <div class="project-card">
-        <p class="project-desc">
-          <strong>Journal Paper:</strong> Stress-Diffusion Interactions in Li-Ion Battery Electrode (PDF)
-        </p>
+        <div class="gallery">
+          <figure>
+            <img src="Journal/Himalaya%20Singh.jpeg" alt="Himalaya Singh">
+            <figcaption>Author photo</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project1/Flowchart.png" alt="Research workflow">
+            <figcaption>Research workflow figure</figcaption>
+          </figure>
+        </div>
 
         <div class="links-row">
-          <a class="btn primary" href="Journal/JOURNAL%20PAPER.pdf" target="_blank" rel="noreferrer">Open Journal Paper</a>
+          <a class="btn primary" href="Journal/JOURNAL%20PAPER.pdf" target="_blank" rel="noreferrer">Open Journal Paper (PDF)</a>
         </div>
       </div>
     </section>
