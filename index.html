@@ -14,7 +14,7 @@
     }
 
     header {
-      padding: 60px 20px;
+      padding: 52px 18px 36px 18px;
       text-align: center;
       background: #1f4ed8;
     }
@@ -22,12 +22,59 @@
     header h1 {
       margin: 0 0 10px 0;
       font-size: 44px;
+      letter-spacing: 0.5px;
     }
 
     header p {
       margin: 6px 0;
       font-size: 16px;
       color: #e6ecff;
+    }
+
+    .hero {
+      max-width: 980px;
+      margin: 18px auto 0 auto;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 0 18px;
+    }
+
+    .hero img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      background: rgba(0,0,0,0.2);
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      padding: 0 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #0b1020;
+      color: #ffffff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-size: 14px;
+    }
+
+    .btn.primary {
+      background: #ffffff;
+      color: #0b1020;
+      border: 1px solid #ffffff;
+      font-weight: 700;
     }
 
     .wrap {
@@ -51,6 +98,7 @@
       padding: 22px;
       border-radius: 12px;
       margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .project-card {
@@ -58,6 +106,7 @@
       padding: 22px;
       border-radius: 12px;
       margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .project-desc {
@@ -82,30 +131,27 @@
       column-gap: 40px;
     }
 
-    .btns {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 18px;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: #0b1020;
+    .contact-item {
+      background: #0f1430;
+      border: 1px solid #2a356b;
+      border-radius: 12px;
+      padding: 14px;
+      color: #d0d6ff;
+      line-height: 1.6;
+      word-break: break-word;
+    }
+
+    .contact-item a {
       color: #ffffff;
       text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      font-size: 14px;
-    }
-
-    .btn.primary {
-      background: #ffffff;
-      color: #0b1020;
-      border: 1px solid #ffffff;
-      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
     }
 
     .gallery {
@@ -137,6 +183,13 @@
       line-height: 1.5;
     }
 
+    .links-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
     footer {
       text-align: center;
       padding: 22px 12px 40px 12px;
@@ -152,6 +205,19 @@
       .gallery {
         grid-template-columns: 1fr;
       }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero img {
+        margin: 0 auto;
+      }
     }
   </style>
 </head>
@@ -163,12 +229,25 @@
     <p>Mechanical Design Engineer (M.Tech) | Multiphysics Simulation | Finite Element Analysis</p>
     <p>FEM • Fracture Mechanics • Computational Mechanics • Python Scripting</p>
 
+    <div class="hero">
+      <img src="Journal/Himalaya%20Singh.jpeg" alt="Himalaya Singh" />
+      <div>
+        <p style="margin:0; color:#e6ecff; line-height:1.7;">
+          Professional portfolio showcasing multiphysics FEM, fracture modelling, process simulation, and mechanical design.
+        </p>
+        <div class="links-row">
+          <a class="btn" href="Journal/JOURNAL%20PAPER.pdf" target="_blank" rel="noreferrer">View Journal Paper (PDF)</a>
+        </div>
+      </div>
+    </div>
+
     <div class="btns">
       <a class="btn primary" href="#projects">View Projects</a>
       <a class="btn" href="#certifications">Certifications</a>
-      <a class="btn" href="mailto:yourmail@example.com">Email</a>
-      <a class="btn" href="https://github.com/ME22M817" target="_blank">GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a class="btn" href="#contact">Contact</a>
+      <a class="btn" href="mailto:aayusingh05@gmail.com">Email</a>
+      <a class="btn" href="tel:+919618142923">Call</a>
+      <a class="btn" href="https://github.com/ME22M817" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   </header>
 
@@ -176,7 +255,6 @@
 
     <section>
       <h2>Professional Summary</h2>
-
       <div class="card">
         <p class="project-desc">
           Mechanical Design Engineer (M.Tech) with over 2 years of experience in multiphysics simulation and finite element
@@ -188,7 +266,6 @@
 
     <section>
       <h2>Core Competencies</h2>
-
       <div class="card">
         <ul class="skills-list">
           <li>Finite Element Method (FEM)</li>
@@ -284,13 +361,8 @@
           </figure>
 
           <figure>
-            <img src="Project2/Geo2.png" alt="Geometry view 3">
-            <figcaption>Mesh quality and region identification for stable nonlinear solve.</figcaption>
-          </figure>
-
-          <figure>
-            <img src="Project2/Geo3.png" alt="Geometry view 4">
-            <figcaption>Compression directions, contact regions, and constrained surfaces.</figcaption>
+            <img src="Project2/Geo3.png" alt="Geometry view 3">
+            <figcaption>Mesh and region identification used for stable nonlinear solve.</figcaption>
           </figure>
 
           <figure>
@@ -377,6 +449,48 @@
         </div>
       </div>
 
+      <div class="project-card">
+        <h3>Design of Worm Gearbox Crane Main Hoist for Uniform Shock Loads</h3>
+
+        <p class="project-desc">
+          Designed and modelled a worm gearbox in Creo and Fusion 360, and performed structural and thermal analysis in
+          ANSYS to optimize load handling, durability, and performance.
+        </p>
+
+        <ul>
+          <li>Created gearbox geometry and assembly modelling for manufacturable design.</li>
+          <li>Performed structural analysis to assess load capacity under shock load conditions.</li>
+          <li>Performed thermal assessment to evaluate durability and performance under operating conditions.</li>
+        </ul>
+
+        <div class="gallery">
+          <figure>
+            <img src="Project5/Casing.jpg" alt="Worm gearbox casing">
+            <figcaption>Worm gearbox casing modelling and assembly view.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project5/Meshing%20of%20house.jpg" alt="Meshing of housing">
+            <figcaption>Meshing of housing for structural and thermal analysis.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project5/Sliced%20model.jpg" alt="Sliced model">
+            <figcaption>Sliced model used for internal geometry inspection and analysis setup.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project5/von%20mises%20stress.jpg" alt="Von Mises stress">
+            <figcaption>Von Mises stress results under uniform shock loads.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project5/Deformation%20of%20housing.png" alt="Deformation of housing">
+            <figcaption>Deformation results showing displacement and stiffness response.</figcaption>
+          </figure>
+        </div>
+      </div>
+
     </section>
 
     <section id="certifications">
@@ -384,11 +498,43 @@
 
       <div class="project-card">
         <ul>
-          <li>Finite element analysis convergence and mesh independence (May, 2023)</li>
-          <li>FEM linear, nonlinear analysis and post-processing (May, 2023)</li>
-          <li>Automation in robotics control (April, 2021)</li>
-          <li>QCAD (Aug, 2020), Solid Edge (Feb, 2020), Python Programming (May, 2023)</li>
+          <li><a class="btn" href="Certificates/FEM1.pdf" target="_blank" rel="noreferrer">Finite element analysis convergence and mesh independence (May, 2023)</a></li>
+          <li><a class="btn" href="Certificates/FEM2.pdf" target="_blank" rel="noreferrer">FEM linear, nonlinear analysis and post-processing (May, 2023)</a></li>
+          <li><a class="btn" href="Certificates/QCAD.pdf" target="_blank" rel="noreferrer">QCAD (Aug, 2020)</a></li>
+          <li><a class="btn" href="Certificates/solid%20edge.pdf" target="_blank" rel="noreferrer">Solid Edge (Feb, 2020)</a></li>
         </ul>
+
+        <p class="project-desc" style="margin-top:14px;">
+          You can upload the remaining certificates (Robotics, Python, etc.) into <strong>Certificates</strong> folder and add them here the same way.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="card">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>Email:</strong><br>
+            <a href="mailto:aayusingh05@gmail.com">aayusingh05@gmail.com</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Phone:</strong><br>
+            <a href="tel:+919618142923">+91 9618142923</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>GitHub:</strong><br>
+            <a href="https://github.com/ME22M817" target="_blank" rel="noreferrer">github.com/ME22M817</a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Website:</strong><br>
+            <a href="https://himalayasingh.github.io" target="_blank" rel="noreferrer">himalayasingh.github.io</a>
+          </div>
+        </div>
       </div>
     </section>
 
