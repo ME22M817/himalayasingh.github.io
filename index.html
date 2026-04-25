@@ -16,7 +16,7 @@
     header {
       padding: 52px 18px 36px 18px;
       text-align: center;
-      background: #1f4ed8;
+      background: linear-gradient(135deg, #1f4ed8, #0b1020);
     }
 
     header h1 {
@@ -74,6 +74,12 @@
       font-size: 20px;
     }
 
+    h4 {
+      margin: 22px 0 10px 0;
+      font-size: 17px;
+      color: #ffffff;
+    }
+
     .card {
       background: #161c33;
       padding: 22px;
@@ -112,6 +118,48 @@
       column-gap: 40px;
     }
 
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .skill-box {
+      background: #0f1430;
+      border: 1px solid #2a356b;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .skill-box h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .skill-box p {
+      color: #d0d6ff;
+      line-height: 1.6;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      background: #0f1430;
+      color: #dce4ff;
+      border: 1px solid #2a356b;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -142,6 +190,10 @@
       margin-top: 16px;
     }
 
+    .gallery.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     figure {
       margin: 0;
       background: #0f1430;
@@ -155,6 +207,13 @@
       height: auto;
       border-radius: 10px;
       display: block;
+    }
+
+    figure video {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      background: #000000;
     }
 
     figcaption {
@@ -171,6 +230,17 @@
       margin-top: 10px;
     }
 
+    .note {
+      background: rgba(31, 78, 216, 0.18);
+      border: 1px solid rgba(108, 137, 255, 0.35);
+      border-radius: 12px;
+      padding: 14px;
+      color: #d0d6ff;
+      line-height: 1.6;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 22px 12px 40px 12px;
@@ -183,7 +253,12 @@
         columns: 1;
       }
 
-      .gallery {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery,
+      .gallery.three {
         grid-template-columns: 1fr;
       }
 
@@ -198,11 +273,13 @@
 
   <header>
     <h1>Himalaya Singh</h1>
-    <p>Mechanical Design Engineer (M.Tech) | Multiphysics Simulation | Finite Element Analysis</p>
-    <p>FEM • Fracture Mechanics • Computational Mechanics • Python Scripting</p>
+    <p>Mechanical Design Engineer (M.Tech) | Multiphysics Simulation | CFD & FEM | Simulation Application Development</p>
+    <p>OpenFOAM • FEniCSx • ANSYS • FastAPI • Docker • Cloud/HPC Workflows • ParaView</p>
 
     <div class="btns">
       <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="#skills">Skills</a>
+      <a class="btn" href="#cfd-openfoam">CFD OpenFOAM Project</a>
       <a class="btn" href="#certifications">Certifications</a>
       <a class="btn" href="#journal">Journal</a>
       <a class="btn" href="#contact">Contact</a>
@@ -219,31 +296,179 @@
       <h2>Professional Summary</h2>
       <div class="card">
         <p class="project-desc">
-          Mechanical Design Engineer (M.Tech) with over 2 years of experience in multiphysics simulation and finite element
-          analysis. Skilled in mathematical modelling, stress analysis, and thermomechanical coupling. Passionate about FEM
-          based research in composites, process optimization, and advanced numerical simulation methods.
+          Mechanical Design Engineer (M.Tech) with experience in multiphysics simulation, finite element analysis,
+          CFD workflows, mathematical modelling, and engineering application development. Skilled in building physics-based
+          computational models and converting simulation workflows into usable software platforms using Python, FastAPI,
+          Docker, OpenFOAM, FEniCSx, ParaView, and cloud/HPC infrastructure.
         </p>
       </div>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Core Competencies</h2>
       <div class="card">
         <ul class="skills-list">
           <li>Finite Element Method (FEM)</li>
           <li>Computational Mechanics</li>
+          <li>CFD Simulation using OpenFOAM</li>
           <li>Backend Computational Simulation Engineer</li>
           <li>Fracture Mechanics</li>
           <li>Multiphysics Simulation</li>
-          <li>Python Scripting</li>
-          <li>Designing</li>
+          <li>Simulation Application Development</li>
+          <li>FastAPI Backend Development</li>
+          <li>Python Scripting and Automation</li>
+          <li>Docker-Based Simulation Workflows</li>
+          <li>Cloud and HPC Simulation Execution</li>
+          <li>Remote Visualization using ParaView pvserver</li>
           <li>Stress Analysis</li>
+          <li>Mechanical Design and CAD</li>
         </ul>
+      </div>
+
+      <h2>Technical Skill Set</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Simulation & Modelling</h3>
+          <p>ANSYS, OpenFOAM, FEniCS, FEniCSx, SfePy, FEM, CFD, linear and non-linear structural analysis, thermal analysis, stress analysis, 1-way and 2-way multiphysics coupling.</p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Application Development</h3>
+          <p>FastAPI, Streamlit, Python backend development, simulation workflow automation, REST API design, run management, result export, and post-processing dashboard integration.</p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Programming & Automation</h3>
+          <p>Python, NumPy, SciPy, PyVista, Bash scripting, automated simulation pipelines, data processing, CSV-based post-processing, and engineering graph generation.</p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Cloud & HPC Infrastructure</h3>
+          <p>Docker containerization, SSH tunneling, ParaView pvserver, remote visualization, client-server architecture, HPC workflows, parallel execution, and cloud-bursting concepts.</p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Geometry, Meshing & Post-Processing</h3>
+          <p>Gmsh, ANSYS Meshing, distributed meshing for large-scale models, ParaView, PyVista, OpenFOAM postProcessing, and automated summary result extraction.</p>
+        </div>
+
+        <div class="skill-box">
+          <h3>Design, CAD & Standards</h3>
+          <p>Creo, Fusion 360, Solid Edge, AutoCAD, mechanical design, ASME, ISO/ASTM, Eurocode, and engineering documentation.</p>
+        </div>
       </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
+
+      <div class="project-card" id="cfd-openfoam">
+        <h3>Project 6: CFD Simulation Application Development Using OpenFOAM, FastAPI, Docker and ParaView</h3>
+
+        <p class="project-desc">
+          Developed a CFD simulation workflow for stirred tank and rotating machinery analysis using OpenFOAM with AMI-based
+          rotating zone setup. The project connects CFD modelling, backend application development, Docker-based execution,
+          cloud/HPC workflow design, and ParaView client-server visualization into a complete simulation platform.
+        </p>
+
+        <ul>
+          <li>Built OpenFOAM CFD workflows for stirred tank simulation using AMI interface and rotating impeller motion.</li>
+          <li>Integrated simulation execution with a FastAPI backend and Docker containerized OpenFOAM environment.</li>
+          <li>Designed case-generation logic where user inputs create a new run folder without modifying the original template case.</li>
+          <li>Supported serial and parallel execution workflows for local, cloud, and HPC-style simulations.</li>
+          <li>Implemented post-processing logic for simulation summary CSV files, velocity, kinematic pressure, shear rate, Reynolds number, tip speed, vessel capacity, and mixing scale.</li>
+          <li>Used ParaView pvserver, SSH tunneling, and client-server visualization for remote inspection of CFD results.</li>
+          <li>Developed an application interface for pre-processing, run monitoring, and post-processing visualization.</li>
+        </ul>
+
+        <div class="tag-row">
+          <span class="tag">OpenFOAM</span>
+          <span class="tag">AMI Method</span>
+          <span class="tag">CFD</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">ParaView pvserver</span>
+          <span class="tag">SSH Tunneling</span>
+          <span class="tag">Parallel Computing</span>
+          <span class="tag">Cloud/HPC</span>
+        </div>
+
+        <h4>Simulation Videos</h4>
+        <div class="gallery">
+          <figure>
+            <video src="Project6/video1.mp4" controls preload="metadata"></video>
+            <figcaption>video1: CFD flow field / stirred tank simulation animation.</figcaption>
+          </figure>
+
+          <figure>
+            <video src="Project6/video2.mp4" controls preload="metadata"></video>
+            <figcaption>video2: ParaView visualization of rotating domain or velocity contours.</figcaption>
+          </figure>
+
+          <figure>
+            <video src="Project6/video3.mp4" controls preload="metadata"></video>
+            <figcaption>video3: Simulation run, result animation, or AMI rotating impeller behaviour.</figcaption>
+          </figure>
+
+          <figure>
+            <video src="Project6/video4.mp4" controls preload="metadata"></video>
+            <figcaption>video4: Application workflow, run monitor, or post-processing demonstration.</figcaption>
+          </figure>
+        </div>
+
+        <h4>Application Development Screenshots</h4>
+        <div class="gallery">
+          <figure>
+            <img src="Project6/A1.png" alt="CFD application screenshot A1">
+            <figcaption>A1: Pre-processing UI for vessel, impeller, solver, and transport inputs.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/A2.png" alt="CFD application screenshot A2">
+            <figcaption>A2: Backend-generated case setup and run control interface.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/A3.png" alt="CFD application screenshot A3">
+            <figcaption>A3: Run monitor showing simulation status, logs, and progress.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/A4.png" alt="CFD application screenshot A4">
+            <figcaption>A4: Post-processing dashboard with pressure, velocity, and derived CFD results.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/A5.png" alt="CFD application screenshot A5">
+            <figcaption>A5: Saved runs, exported results, and completed simulation output view.</figcaption>
+          </figure>
+        </div>
+
+        <h4>Post-Processing Graphs</h4>
+        <div class="gallery three">
+          <figure>
+            <img src="Project6/graph1.png" alt="CFD post-processing graph 1">
+            <figcaption>graph1: Average velocity / flow evolution with respect to simulation time.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/graph2.png" alt="CFD post-processing graph 2">
+            <figcaption>graph2: Average kinematic pressure or pressure-related CFD response.</figcaption>
+          </figure>
+
+          <figure>
+            <img src="Project6/graph3.png" alt="CFD post-processing graph 3">
+            <figcaption>graph3: Shear rate, velocity-pressure relation, or combined CFD performance metric.</figcaption>
+          </figure>
+        </div>
+
+        <div class="note">
+          Keep these media files inside the <strong>Project6</strong> folder in your GitHub repository. This folder name represents <strong>Project 6</strong>:
+          <strong>video1.mp4, video2.mp4, video3.mp4, video4.mp4, A1.png, A2.png, A3.png, A4.png, A5.png, graph1.png, graph2.png, graph3.png</strong>.
+          Then GitHub Pages will automatically load them from the paths used above.
+        </div>
+      </div>
 
       <div class="project-card">
         <h3>Role of Microstructure on Stress-Diffusion Interactions in Li-Ion Battery Electrode</h3>
